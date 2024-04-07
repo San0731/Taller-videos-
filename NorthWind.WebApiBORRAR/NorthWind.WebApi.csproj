@@ -7,11 +7,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="MediatR" Version="12.1.1" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\NorthWind.Controllers\NorthWind.Controllers.csproj" />
     <ProjectReference Include="..\NorthWind.IoC\NorthWind.IoC.csproj" />
     <ProjectReference Include="..\NorthWind.WebExceptionsPresenter\NorthWind.WebExceptionsPresenter.csproj" />
   </ItemGroup>
