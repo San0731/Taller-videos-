@@ -17,7 +17,7 @@ namespace NorthWind.Controllers
             Mediator = mediator;
         [HttpPost("create-order")]
         public async Task<string> CreateOrder(
-            CreateOrdeParams orderparams)
+            CreateOrderParams orderparams)
         {
             CreateOrderPresenter Presenter = new CreateOrderPresenter();
             await Mediator.Send(new CreateOrderInputPort(orderparams, Presenter));

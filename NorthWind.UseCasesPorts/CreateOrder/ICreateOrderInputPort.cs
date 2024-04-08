@@ -9,6 +9,6 @@ namespace NorthWind.UseCasesPorts.CreateOrder
 {
     public interface ICreateOrderInputPort
     {
-        Task Handle(CreateOrdeParams order);
+        Task Handle(CreateOrderParams order);
     }
 }

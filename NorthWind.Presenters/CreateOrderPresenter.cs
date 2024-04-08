@@ -1,18 +1,21 @@
 ﻿
+using Azure;
+using NorthWind.UseCasesPorts.CreateOrder;
+using System;
+using System.Threading.Tasks;
+
 namespace NorthWind.Presenters
 {
-    public class CreateOrderPresenter : IPresenter<int, string>
+    public class CreateOrderPresenter : IcreateOrderOutputPort, IPresenter<string>
     {
-        public CreateOrderPresenter()
-        {
-
-        }
+        
 
         public string Content { get; private set; }
 
-        public void Handle(int response)
+        public Task Handle(int orderId)
         {
-            Content = $"Order ID: {response}";
+            Content = $"Order ID: {orderId}";
+            return Task.CompletedTask;
         }
-    }
+    }    
 }
