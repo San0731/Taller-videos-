@@ -67,7 +67,7 @@ namespace NorthWind.UseCases.CreateOrder
                 throw new GeneralException("Error al crear la orden.",
                     ex.Message);
             }
-            await OutputPort.Handle(Order.Id);
+            await OutputPort.Handle(order);
         }        
     }
 }
